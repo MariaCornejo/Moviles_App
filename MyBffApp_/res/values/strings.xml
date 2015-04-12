@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyBffApp_</string>
+    <string name="action_settings">Settings</string>
+    <string name="inicio">My Bff App</string>
+   
+    <string name="Pregunta1">¿Prefiere la mùsica en inglès o en español?</string>
+    <string name="opcion1">Inglès</string>
+    <string name="opcion2">Español</string>
+    <string name="Pregunta2">¿Prefiere la mùsica local o internacional?</string>
+    <string name="p2opcion1">Local</string>
+    <string name="p2opcion2">Internacional</string>
+    <string name="Pregunta3">¿Le gustan las boyband?</string>
+    <string name="p3opcion1">SI</string>
+    <string name="p3opcion2">NO</string>
+    <string name="Pregunta4">¿Prefiere grupos o solistas?</string>
+    <string name="p4opcion1">Grupos</string>
+    <string name="p4opcion2">Solistas</string>
+    <string name="Pregunta5">Â¿En alguna ocasiÃ³n ha perdido los nervios?</string>
+    <string name="p5opcion1">SI</string>
+    <string name="p5opcion2">NO</string>
+    <string name="Pregunta6"> Â¿CambiarÃ­a algo de su aspecto fÃ­sico?</string>
+    <string name="p6opcion1">SI</string>
+    <string name="p6opcion2">NO</string>
+    <string name="Pregunta7">Â¿Se considera nervioso/a?</string>
+    <string name="p7opcion1">SI</string>
+    <string name="p7opcion2">NO</string>
+    <string name="Pregunta8">Â¿Es una persona activa y emprendedora?</string>
+    <string name="p8opcion1">SI</string>
+    <string name="p8opcion2">NO</string>
+    <string name="Pregunta9">Â¿Piensa a menudo en el pasado?</string>
+    <string name="p9opcion1">SI</string>
+    <string name="p9opcion2">NO</string>
+    <string name="Pregunta10">Â¿Le gusta hacer amigos?</string>
+    <string name="p10opcion1">SI</string>
+    <string name="p10opcion2">NO</string>
+    <string name="BotonSiguiente">Siguiente</string>
+
+</resources>

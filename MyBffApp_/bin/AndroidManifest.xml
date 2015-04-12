@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mybffapp_"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!--  <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name="com.example.mybffapp_.LoginActivity"
+            android:label="Login" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.LoginActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.mybffapp_.RegistroActivity"
+            android:label="Registration" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.RegistroActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.mybffapp_.InfoActivity"
+            android:label="Welcome" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.InfoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        
+         <activity
+            android:name="com.example.mybffapp_.Test1Activity"
+            android:label="Test" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.Test1Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name="com.example.mybffapp_.Test2Activity"
+            android:label="Test" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.Test2Activity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.mybffapp_.PlaylistActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.PlaylistActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>
