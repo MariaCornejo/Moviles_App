@@ -17,30 +17,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Pregunta1" />
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/opcion1"/>
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/opcion2" 
-        android:checked="true"/>
+    <RadioGroup 
+        android:id="@+id/GrbGrupo1"
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+	    <RadioButton 
+	        android:id="@+id/G1Opcion1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/opcion1"/>
+	    <RadioButton 	        
+	        android:id="@+id/G1Opcion2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/opcion2" 
+	        android:checked="true"/>
+	  </RadioGroup>
     
  <!-- PREGUNTA2 -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Pregunta2" />
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p2opcion1" />
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p2opcion2"
-        android:checked="true" />
+    <RadioGroup 
+        android:id="@+id/GrbGrupo2"
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+	    <RadioButton 	        
+	        android:id="@+id/G2Opcion1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/p2opcion1" />
+	   <RadioButton 	        
+	        android:id="@+id/G2Opcion2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/p2opcion2" />
+    </RadioGroup>
+	    
     
     <!-- PREGUNTA3-->
     <TextView
@@ -48,31 +64,49 @@
         android:layout_height="wrap_content"
         android:text="@string/Pregunta3"
          />
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p3opcion1" />
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p3opcion2"
-        android:checked="true" />
+    <RadioGroup 
+        android:id="@+id/GrbGrupo3"
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+	    <RadioButton  
+	        android:id="@+id/G3Opcion1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/p3opcion1" />
+	    <RadioButton  
+	        android:id="@+id/G3Opcion2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/p3opcion2"
+	        android:checked="true" />
+    </RadioGroup>
+    
      
     <!-- PREGUNTA4-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Pregunta4" />
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p4opcion1" />
-    <RadioButton 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/p4opcion2" 
-        android:checked="true"/>
+     <RadioGroup 
+        android:id="@+id/GrbGrupo4"
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+	    <RadioButton 	       
+	        android:id="@+id/G4Opcion1"       
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/p4opcion1" />
+	    <RadioButton 
+	        android:id="@+id/G4Opcion2" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/p4opcion2" 
+	        android:checked="true"/>
 
+	</RadioGroup>
+	    
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

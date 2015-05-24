@@ -17,6 +17,8 @@ public class LoginActivity extends Activity
 {
 	
 	private EditText et1;
+	private EditText  campoEmail, campoPassword;
+
 	String[] emails={"pespinozagomez@gmail.com",
 			"malucornejo.96@gmail.com",
 			"pmantillacardenas@gmail.com",
@@ -46,7 +48,33 @@ public class LoginActivity extends Activity
     }
     public void onClick2(View view)
 	{
-			startActivity(new Intent("com.example.mybffapp_.Test1Activity"));
+    	String email,password;
+    	boolean flag=true;
+		campoEmail = (EditText) findViewById(R.id.txtEmail);
+		campoPassword = (EditText) findViewById(R.id.txtPass);
+		email=campoEmail.getText().toString();
+		password=campoPassword.getText().toString();
+		DBAdapter db= new DBAdapter(this);
+        db.open();
+        flag=db.ValidarUsuario(email,password);
+        if(flag==true)
+        {
+        	Toast.makeText(getBaseContext(),
+    				"Usuario Válido... Bienvenido!",
+    				Toast.LENGTH_SHORT).show();      	
+            db.close();
+        	startActivity(new Intent("com.example.mybffapp_.Test1Activity"));
+        }
+        else
+        {
+        	Toast.makeText(getBaseContext(),
+    				"Usuario o Password Incorrectos!",
+    				Toast.LENGTH_SHORT).show();  
+            db.close();
+        	startActivity(new Intent("com.example.mybffapp_.LoginActivity"));
+
+        }
+		
 	}
 	public void onClick3(View view)
 	{

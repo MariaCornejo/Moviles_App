@@ -16,7 +16,7 @@ public class Test2Activity extends Activity
 	}
 	public void onClick6(View view)
     {
-        startActivity(new Intent("com.example.mybffapp_.PlaylistActivity"));
+        startActivity(new Intent("com.example.mybffapp_.PrincipalActivity"));
     }
 
 }

@@ -68,6 +68,31 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.mybffapp_.PrincipalActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.PrincipalActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mybffapp_.EstadosActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.EstadosActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.mybffapp_.RememberActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.RememberActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         
 
         <activity
             android:name="com.example.mybffapp_.PlaylistActivity"
@@ -77,8 +102,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-
+        
+		
+		
+		<activity
+            android:name="com.example.mybffapp_.EmailsActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.EmailsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
