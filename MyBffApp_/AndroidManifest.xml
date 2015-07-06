@@ -7,6 +7,9 @@
     <!--  <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="21" />-->
+      <uses-permission android:name="android.permission.INTERNET"/>
+    
+    
 
     <application
         android:allowBackup="true"
@@ -103,7 +106,14 @@
             </intent-filter>
         </activity>
         
-		
+		<activity
+            android:name="com.example.mybffapp_.PlaylistActivityhappy"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.PlaylistActivityhappy" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 		
 		<activity
             android:name="com.example.mybffapp_.EmailsActivity"
@@ -113,6 +123,47 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.mybffapp_.musicvideoActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.musicvideoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		  <activity
+            android:name="com.example.mybffapp_.videoActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.videoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+		  
+		   <activity
+            android:name="com.example.mybffapp_.chatActivity"
+            android:label="Playlist" >
+            <intent-filter>
+                <action android:name="com.example.mybffapp_.chatActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+		  
+    
+        <activity
+            android:name="com.example.mybffapp_.NotificactionView"
+            android:label="Detalles de la notificacion" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+    
+		
     </application>
 
 </manifest>

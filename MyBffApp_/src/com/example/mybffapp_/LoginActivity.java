@@ -49,7 +49,7 @@ public class LoginActivity extends Activity
     public void onClick2(View view)
 	{
     	String email,password;
-    	boolean flag=true;
+    	boolean flag=false;
 		campoEmail = (EditText) findViewById(R.id.txtEmail);
 		campoPassword = (EditText) findViewById(R.id.txtPass);
 		email=campoEmail.getText().toString();

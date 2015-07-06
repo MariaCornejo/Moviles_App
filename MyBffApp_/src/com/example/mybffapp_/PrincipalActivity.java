@@ -32,7 +32,7 @@ public class PrincipalActivity extends Activity
 	}
 	public void ClickMusic (View view)
 	{
-			startActivity(new Intent("com.example.mybffapp_.EstadosActivity"));
+			startActivity(new Intent("com.example.mybffapp_.musicvideoActivity"));
 	}
 	public void ClickRemember(View view)
 	{
@@ -41,6 +41,10 @@ public class PrincipalActivity extends Activity
 	public void Recomendar(View view)
 	{
 			startActivity(new Intent("com.example.mybffapp_.EmailsActivity"));
+	}
+	public void Chatear(View view)
+	{
+			startActivity(new Intent("com.example.mybffapp_.chatActivity"));
 	}
 
 }

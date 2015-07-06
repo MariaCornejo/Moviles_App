@@ -18,24 +18,34 @@
         android:text="@string/inicio"
         android:textSize="30sp" />
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/text01"
-        android:layout_marginTop="19dp"
-        android:contentDescription="@string/app_name"
-        android:scaleType="fitXY"
-        android:src="@drawable/music" />
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/imageView2"
+        android:onClick="ClickRemember" 
+        android:text="Remember" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="20dp"
+        android:onClick="ClickMusic" 
+        android:text="Feels &amp; Music" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_alignRight="@+id/ratingBar1"
+        android:layout_above="@+id/button1"
         android:layout_alignTop="@+id/imageView1"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/button1"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
         android:src="@drawable/guardar" />
@@ -47,34 +57,35 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/text01"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/music" />
+
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ratingBar1"
-        android:layout_centerHorizontal="true"
+        android:layout_alignRight="@+id/button2"
+        android:layout_marginBottom="15dp"
         android:onClick="Recomendar"
         android:text="Share us!" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="21dp"
-        android:onClick="ClickMusic"
-        android:text="Feels &amp; Music" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/imageView2"
-        android:layout_alignTop="@+id/button1"
-        android:onClick="ClickRemember"
-        android:text="Remember" />
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignLeft="@+id/ratingBar1"
+        android:onClick="Chatear"
+        android:text="Chat!" />
 
 </RelativeLayout>

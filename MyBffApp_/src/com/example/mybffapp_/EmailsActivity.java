@@ -21,7 +21,7 @@ public class EmailsActivity extends Activity
             {"someguy@yourcompany.com", 
         	 "anotherguy@yourcompany.com"};
         String[] cc = {"busybody@yourcompany.com"};
-        sendEmail(to, cc, "MyBffApp", "You should try My Bff App... I love it!");
+        sendEmail(to, cc, "Hello", "Hello my friends!");
     }
     
     //—-sends an SMS message to another device—-

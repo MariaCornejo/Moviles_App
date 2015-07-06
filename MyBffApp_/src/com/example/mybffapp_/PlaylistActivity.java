@@ -10,9 +10,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.widget.Button;
 public class PlaylistActivity  extends ListActivity 
 {
-	
+	int notificationID = 1;
+    
     String[] pl_sad={"Give Your Heart a break-Demi Lovato",
     		"Wrecking Ball-Miley Cyrus",
     		"The Scientist-Coldplay",
@@ -23,7 +29,7 @@ public class PlaylistActivity  extends ListActivity
     		
     		};
     
-    
+   
     Integer[] ms_sad=
 	{
     		R.raw.giveyourheartabreak,
@@ -51,7 +57,7 @@ public class PlaylistActivity  extends ListActivity
 
     public void onListItemClick(ListView parent, View v, int position, long id)
     {
-    		
+    	
     
     		if (mediaPlayer != null)
         	{
@@ -61,10 +67,28 @@ public class PlaylistActivity  extends ListActivity
             mediaPlayer.setLooping(true);
             mediaPlayer.setVolume(100,100);
             mediaPlayer.start();
+            displayNotification();
             Toast.makeText(this, "You have selected: "+ pl_sad[position],
         			Toast.LENGTH_SHORT).show();
+            
     	
     	
+    }
+    protected void displayNotification()
+    {
+    	Intent i = new Intent(this,NotificactionView.class);
+    	i.putExtra("notificationID", notificationID);
+    	PendingIntent pendingIntent = 
+    			PendingIntent.getActivity(this, 0, i, 0);
+    	NotificationManager nm=(NotificationManager)
+    			getSystemService(NOTIFICATION_SERVICE);
+    	Notification notif = new Notification(R.drawable.ic_launcher
+    			,"Se añadió canción",System.currentTimeMillis());
+    	CharSequence from ="MyBffApp Notificacion";
+    	CharSequence message ="Se añadió una nueva canción a Favoritos";
+    	notif.setLatestEventInfo(this, from, message, pendingIntent);
+    	notif.vibrate = new long[]{100,250,100,500};
+    	nm.notify(notificationID,notif);
     	
     }
     @Override
@@ -75,3 +99,11 @@ public class PlaylistActivity  extends ListActivity
     }
     
 }
+
+
+
+
+
+
+
+

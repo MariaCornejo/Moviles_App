@@ -10,7 +10,7 @@ import android.util.Log;
 public class DBAdapter 
 
 {
-	static final String KEY_ROWID="_id";
+	static final String KEY_DNI="dni";
 	static final String KEY_NAME="nombre";
 	static final String KEY_LASTNAME="apellido";
 	static final String KEY_EMAIL="email";
@@ -21,7 +21,7 @@ public class DBAdapter
 	static final String DATABASE_TABLE="usuarios";
 	static final int DATABASE_VERSION=1;
 	static final String DATABASE_CREATE=
-			"create table usuarios (_id integer primary key autoincrement,"
+			"create table usuarios (dni integer primary key,"
 			+"nombre text not null,apellido text not null,email text not null,password text not null "
 			+ ");";
 	final Context context;
@@ -69,24 +69,28 @@ public class DBAdapter
 	{
 		DBHelper.close();
 	}
-	public long insertUsuario (String name, String apellido, String email, String password) 
+	public long insertUsuario (int dni,String name, String apellido, String email, String password) 
 	{
 		ContentValues initialValues=new ContentValues();
+		initialValues.put(KEY_DNI, dni);
 		initialValues.put(KEY_NAME, name);
 		initialValues.put(KEY_LASTNAME, apellido);
 		initialValues.put(KEY_EMAIL, email);
 		initialValues.put(KEY_PASSWORD, password);
 		return db.insert(DATABASE_TABLE, null, initialValues);
+
+
+		
 	}
 
 	public boolean deleteContact(long rowId)
 	{
-		return db.delete(DATABASE_TABLE,KEY_ROWID+"="+rowId,null)>0;
+		return db.delete(DATABASE_TABLE,KEY_DNI+"="+rowId,null)>0;
 	}
 	
 	public Cursor getAllContacts()
 	{
-			return db.query(DATABASE_TABLE,new String[]{KEY_ROWID,
+			return db.query(DATABASE_TABLE,new String[]{KEY_DNI,
 						KEY_NAME,KEY_EMAIL},null,
 						null,null,null,null);
 	}
@@ -96,8 +100,8 @@ public class DBAdapter
 	public Cursor getContact(long rowId) throws SQLException
 	{
 		Cursor mCursor=
-				db.query(true, DATABASE_TABLE,new String[]{KEY_ROWID,
-						KEY_NAME,KEY_EMAIL},KEY_ROWID+"="+rowId,null,
+				db.query(true, DATABASE_TABLE,new String[]{KEY_DNI,
+						KEY_NAME,KEY_EMAIL},KEY_DNI+"="+rowId,null,
 						null,null,null,null);
 		if(mCursor!=null)
 		{
@@ -129,7 +133,7 @@ public class DBAdapter
 		ContentValues args=new ContentValues();
 		args.put(KEY_NAME,name);
 		args.put(KEY_EMAIL,email);
-		return db.update(DATABASE_TABLE, args, KEY_ROWID+"="+rowId, null)>0;
+		return db.update(DATABASE_TABLE, args, KEY_DNI+"="+rowId, null)>0;
 	}
 	
 

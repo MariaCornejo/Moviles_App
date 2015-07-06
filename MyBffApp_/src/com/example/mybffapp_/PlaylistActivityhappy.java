@@ -28,17 +28,7 @@ public class PlaylistActivityhappy  extends ListActivity
     		};
     
     
-			Integer[] ms_happy=
-		    	{
-		        		R.raw.bangbang,
-		        		R.raw.hangover,
-		        		R.raw.pleasedontstopthemusic,
-		        		R.raw.sing,
-		        		R.raw.problem,
-		        		R.raw.shakeitoff,
-		        		R.raw.wecantstop
-		        		
-		    	};
+			
     private ImageButton bPlay, bPause, bStop;
     MediaPlayer mediaPlayer;
     private boolean pause;
@@ -58,14 +48,7 @@ public class PlaylistActivityhappy  extends ListActivity
     {
     		
     
-    		if (mediaPlayer != null)
-        	{
-        		mediaPlayer.release();
-        	}
-            mediaPlayer = MediaPlayer.create(this,ms_happy[position]);
-            mediaPlayer.setLooping(true);
-            mediaPlayer.setVolume(100,100);
-            mediaPlayer.start();
+    		
             Toast.makeText(this, "You have selected: "+ pl_happy[position],
         			Toast.LENGTH_SHORT).show();
     	
